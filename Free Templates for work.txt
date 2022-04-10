@@ -1,3 +1,9 @@
+For Font types and sizes use this link:
+
+https://www.w3.org/Style/Examples/007/fonts.en.html
+
+
+
 Here's a list of free html/css template resources:
 www.freecsstemplates.org
 www.freewebsitetemplates.com
