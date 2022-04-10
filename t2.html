@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="icon" href="rhino_icon.png" >
+        <title> Reading Skills Test</title>
+        <meta name="keywords" content="HTML,test,Reading,skills">
+        <meta charset="UTF-8">
+        <style>
+            .tb{
+                background-color: rgb(49,51,15);
+                height: 2.5cm;               
+            }
+            .i1{
+                height: 2cm;
+                width: 4cm;
+                                
+            }
+            .tbt{
+                color: rgb(252,255,253);
+                font-family: fantasy;
+                font-size: 1.5cm;
+                padding-left: 0.5cm;
+            }
+            .detab{
+                padding-left: 8cm;
+            }
+            .tt2{
+                padding-left: 21cm;
+                color: rgb(252,255,253);
+            }    
+            .tt3{
+                border-style: solid;
+                width: 9cm;
+                border-color: rgb(252,255,253);
+            }    
+            .b1{
+                background-color: rgb(247,244,205);
+                padding: 0.5cm;
+            }  
+            .bb1{
+                background-color: rgb(242,184,90);
+                height: 5cm;
+            }  
+
+            .eb{
+                width: 5cm;
+                height: 1cm;
+                background-color: transparent;
+                border-radius: 5px;
+                color: rgb(242,151,24);
+                border-color: rgb(242,151,24);
+                border-style: solid;
+                text-transform: uppercase;
+                text-decoration: none;
+
+            }
+            .eb:hover{
+                width: 5cm;
+                height: 1cm;
+                background-color: transparent;
+                border-radius: 5px;
+                color: rgb(242,24,79);
+                border-color: rgb(242,24,79);
+                border-style: dotted;
+                text-transform: uppercase;
+                text-decoration: none;
+
+            }
+            .sbt{
+                text-decoration: none;
+            }
+            .h1{
+                padding-left: 15cm;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .fmainq1{
+                font-family: 'Courier New',monospace;
+                font-weight: 500;
+                font-variant: small-caps;
+                font-stretch: expanded;
+                padding: 0.5cm;
+            }
+            .qs{
+                background-color: rgb(245,242,184);
+            }
+            .que1{
+                font-family: 'Times New Roman', Times;
+            }
+            .qop{
+                font-family: Arial,sans-serif;
+                width: 12cm;
+                height: 1cm;
+                background-color: transparent;
+                border-color: rgb(252,240,243);
+                border-style: dotted;
+            }
+            .qop:hover{
+                font-family: Arial,sans-serif;
+                width: 12cm;
+                height: 1cm;
+                background-color: rgb(255,195,56);
+                border-color: rgb(255,195,56);
+                border-style: dotted;             
+            }
+            .qop:active{
+                font-family: Arial,sans-serif;
+                width: 12cm;
+                height: 1cm;
+                background-color: rgb(170,242,128);
+                border-color: rgb(170,242,128);
+                border-style: solid;   
+            }
+            .qop:focus{
+                font-family: Arial,sans-serif;
+                width: 12cm;
+                height: 1cm;
+                background-color: rgb(170,242,128);
+                border-color: rgb(170,242,128);
+                border-style: solid;
+
+            }
+            p{
+                padding-left: 10cm;
+                font-weight: 600;
+            }
+            .au1{
+                
+            }
+        
+
+        </style>
+        <script>
+            const startMinutes = 60;
+            let time = startMinutes * 60;
+
+            const countdownEL = document.getElementById('timer')
+
+            setInterval(updateCountdown,1000);
+
+            function updateCountdown(){
+                const minutes = Math.floor(time/60);
+                let seconds = time % 60;
+
+                document.getElementById('timer').innerHTML = 'Time Left: ' + minutes +':'+seconds;
+                time--;
+            }
+
+         
+        </script>
+       
+    </head>
+    <body class="bdy">
+        <div class="tb">
+            <table>
+                <tr>
+                    <td><div class="tbt">Rhino</div></td>
+                    <td>
+                        <table class="tt2">
+                            <tr>
+                                <td><img src="add.jpg" alt="Student Photo"></td>
+                                <td>
+                                    <table class="tt3">
+                                        <tr><td><div id="name">Name: </div></td></tr>
+                                        <tr><td><div id="USN">USN:  </div></td></tr>
+                                        <tr><td><div id="Sect">Section:  </div></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div>
+            <table>
+                <tr>
+                    <td><h1 class="h1">Listening Skills Test</h1></td>
+                    <td><p id="timer">Time Left : 1:00:00</p></td>
+                </tr>
+            </table>
+            
+        </div>
+        <div>
+            
+        </div>
+        
+        <div class="b1">
+            <br>
+            <div class="fmainq1">Click on the play Button and Carefully listen to the Audio to answer the given questions based on it. .</div>            
+            <div class="Au1">
+                <audio controls autoplay muted>
+                    <source src="audio_ls1.mp3" type="audio/mp3">
+                    Sorry, Something went wrong! We'll get back to you in some time.
+                </audio>
+            </div>
+
+        <br>
+        <div class="qs">
+            <div class="lq1">
+                <div class="que1"><b>Q1:</b>Cook settled in the continent of Australia because :</div>
+                <div class="queop1">
+                    <table>
+                        <tr><td><a class="sbt" href="#q1op1"><button id="q1op1" class="qop">he had under taken the task of criminal reforms</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op2"><button id="q1op2" class="qop">he was upset with the apathy of the British Government</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op3"><button id="q1op3" class="qop">the British Government had not taken his suggestion seriously</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op4"><button id="q1op4" class="qop">he wanted to prove his claim of suitability of that part to live in</button></a></td></tr>
+
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <div class="qs">
+            <div class="lq1">
+                <div class="que1"><b>Q2:</b>Cook settled in the continent of Australia because :</div>
+                <div class="queop1">
+                    <table>
+                        <tr><td><a class="sbt" href="#q1op1"><button id="q1op1" class="qop">he had under taken the task of criminal reforms</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op2"><button id="q1op2" class="qop">he was upset with the apathy of the British Government</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op3"><button id="q1op3" class="qop">the British Government had not taken his suggestion seriously</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op4"><button id="q1op4" class="qop">he wanted to prove his claim of suitability of that part to live in</button></a></td></tr>
+
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <div class="qs">
+            <div class="lq1">
+                <div class="que1"><b>Q3:</b>Cook settled in the continent of Australia because :</div>
+                <div class="queop1">
+                    <table>
+                        <tr><td><a class="sbt" href="#q1op1"><button id="q1op1" class="qop">he had under taken the task of criminal reforms</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op2"><button id="q1op2" class="qop">he was upset with the apathy of the British Government</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op3"><button id="q1op3" class="qop">the British Government had not taken his suggestion seriously</button></a></td></tr>
+                        <tr><td><a class="sbt" href="#q1op4"><button id="q1op4" class="qop">he wanted to prove his claim of suitability of that part to live in</button></a></td></tr>
+
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <div>
+            <button class="eb"><a class="sbt" href="#submit">Submit</a></button>
+        </div>
+    </body>
+</html>
